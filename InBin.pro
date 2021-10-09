@@ -1,3 +1,5 @@
+include(scodes/src/SCodes.pri)
+
 QT += quick
 
 #https://www.iconfinder.com/icons/5452494/automobile_garbage_recycling_transportation_trash_truck_vehicle_icon
@@ -24,3 +26,17 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+android {
+    DISTFILES += \
+        android/AndroidManifest.xml \
+        android/build.gradle \
+        android/gradle/wrapper/gradle-wrapper.jar \
+        android/gradle/wrapper/gradle-wrapper.properties \
+        android/gradlew \
+        android/gradlew.bat \
+        android/res/values/libs.xml
+
+    ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+
+    ANDROID_ABIS = armeabi-v7a
+}

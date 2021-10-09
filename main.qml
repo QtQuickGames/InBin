@@ -1,5 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
+import com.scythestudio.scodes 1.0
+import QtMultimedia 5.15
 
 Window {
     width: 640
@@ -94,10 +96,15 @@ Window {
         }
     }
 
-//    Connections {
-//        target: scanButton
-//        onClicked: {
+    ScannerPage {
+        id: scannerPage
+        visible: false
+    }
 
-//        }
-//    }
+    Connections {
+        target: scanButton
+        onClicked: {
+            scannerPage.visible = true
+        }
+    }
 }

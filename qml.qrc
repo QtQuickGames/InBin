@@ -4,5 +4,7 @@
         <file>LineInput.qml</file>
         <file>Button.qml</file>
         <file>recycling.png</file>
+        <file>ScannerOverlay.qml</file>
+        <file>ScannerPage.qml</file>
     </qresource>
 </RCC>
