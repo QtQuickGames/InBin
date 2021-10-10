@@ -71,6 +71,7 @@ Window {
                 onAccepted: {
                     if (Qt.inputMethod.visible)
                         Qt.inputMethod.hide()
+
                     //flipBar.ok()
                 }
             }
